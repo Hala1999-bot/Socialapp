@@ -1,0 +1,17 @@
+<!-- <app-create-post></app-create-post>
+@for (post of allPosts(); track post.id) {
+<app-s-post [post]="post"></app-s-post>
+} -->
+<!-- <app-create-post (postCreated)="getAllPosts()"></app-create-post>
+
+@for (post of allPosts(); track post.id) {
+<app-s-post [post]="post"></app-s-post>
+} -->
+
+<app-create-post></app-create-post>
+
+@for (post of allPosts(); track post._id) {
+<app-s-post [post]="post"></app-s-post>
+} @empty {
+<p class="text-center text-gray-500 mt-4">No posts yet 😅</p>
+}

@@ -1,0 +1,16 @@
+<section class="bg-gray-100 p-4 rounded-lg my-2">
+  <div class="flex items-center">
+    <img
+      [src]="
+        comment().commentCreator.photo.includes('undefined')
+          ? '/images/profile.png'
+          : comment().commentCreator.photo
+      "
+      class="size-10"
+      [alt]="comment().commentCreator.name"
+    />
+    <h3>{{ comment().commentCreator.name }}</h3>
+    <span>{{ comment().createdAt | date }}</span>
+  </div>
+  <p>{{ comment().content }}</p>
+</section>
